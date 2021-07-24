@@ -1,0 +1,2 @@
+(this["webpackJsonpcv-project"]=this["webpackJsonpcv-project"]||[]).push([[0],{29:function(e,t,c){"use strict";c.r(t);c(0);var n=c(14),r=c.n(n),o=c(11),s=(c(1),c(3));var i=function(){return Object(s.jsx)("div",{children:"about me"})};r.a.render(Object(s.jsx)(o.a,{children:Object(s.jsx)(i,{})}),document.getElementById("root"))}},[[29,1,2]]]);
+//# sourceMappingURL=main.6985e95f.chunk.js.map
