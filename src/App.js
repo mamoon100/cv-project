@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, Link, HashRouter } from "react-router-dom";
+
+import CvMaker from "./component/cv-maker";
+import AboutME from "./component/about-me";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter basename="/"> 
+      <Switch>
+        <Route path='/' exact>
+          <Link to="/about-me">about-me single dash</Link>
+          <Link to="/cv-maker">cv-maker single dash</Link>
+        </Route>
+        {/* <Route path='/' exact>
+          <Link to="/about-me">about-me</Link>
+          <Link to="/cv-maker">cv-maker</Link>
+        </Route> */}
+        <Route path='/about-me'>
+          <AboutME />
+        </Route>
+        <Route path='/cv-maker' >
+          <CvMaker />
+        </Route>
+       </Switch>
+    </HashRouter>
   );
 }
 
