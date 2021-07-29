@@ -1,28 +1,19 @@
-import { Switch, Route, Link, HashRouter } from "react-router-dom";
-
-import CvMaker from "./component/cv-maker";
-import AboutME from "./component/about-me";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import CvMaker from "./pages/cv-maker";
+import AboutME from "./pages/about-me";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <HashRouter basename="/"> 
-      <Switch>
-        <Route path='/' exact>
-          <Link to="/about-me">about-me single dash</Link>
-          <Link to="/cv-maker">cv-maker single dash</Link>
-        </Route>
-        {/* <Route path='/' exact>
-          <Link to="/about-me">about-me</Link>
-          <Link to="/cv-maker">cv-maker</Link>
-        </Route> */}
-        <Route path='/about-me'>
-          <AboutME />
-        </Route>
-        <Route path='/cv-maker' >
-          <CvMaker />
-        </Route>
-       </Switch>
-    </HashRouter>
+    <Switch>
+      <Route path="/about-me">
+        <AboutME />
+      </Route>
+      <Route path="/" exact>
+        <CvMaker />
+      </Route>
+    </Switch>
   );
 }
 
