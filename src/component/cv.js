@@ -215,17 +215,20 @@ function CV(prop) {
                 // width: "25%",
               }}
             >
-              <p
-                style={{
-                  margin: "0",
-                  width: "100%",
-                  textAlign: "justify",
-                  // height: "100px",
-                }}
-              >
-                ({prop.basic.email.split("@")[0]}
-                <br />@{prop.basic.email.split("@")[1]})
-              </p>
+              {prop.basic.email ? (
+                <p
+                  style={{
+                    margin: "0",
+                    width: "100%",
+                    textAlign: "justify",
+                    // height: "100px",
+                  }}
+                >
+                  ({prop.basic.email.split("@")[0]}
+                  <br />@{prop.basic.email.split("@")[1]})
+                </p>
+              ) : null}
+
               <p
                 style={{
                   margin: "0",
