@@ -25,7 +25,7 @@ function CvMaker() {
       <main>
         <Container>
           <Row>
-            <Col lg={6} className="mt-2 mb-2">
+            <Col lg={4} xs={12} className="mt-2 mb-2">
               <RForm
                 setBasic={setBasic}
                 setEdu={setEdu}
@@ -36,7 +36,7 @@ function CvMaker() {
                 setPhoto={setPhoto}
               />
             </Col>
-            <Col lg={4} className="mt-2 mb-2">
+            <Col lg={8} xs={12} className="mt-2 mb-2">
               <CV
                 basic={basic}
                 edu={edu}
