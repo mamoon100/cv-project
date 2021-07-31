@@ -78,7 +78,7 @@ function Certificates(prop) {
           ))}
           <Row className="mb-3">
             <Button type="button" onClick={addSkillFields}>
-              Add New Education
+              Add New Certificate
             </Button>
           </Row>
         </Form>

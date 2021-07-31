@@ -65,7 +65,7 @@ function Language(prop) {
           ))}
           <Row className="mb-3">
             <Button type="button" onClick={addLanguageFields}>
-              Add New Education
+              Add New Language
             </Button>
           </Row>
         </Form>

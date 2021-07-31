@@ -55,7 +55,7 @@ function Skills(prop) {
           ))}
           <Row className="mb-3">
             <Button type="button" onClick={addSkillFields}>
-              Add New Education
+              Add New Skill
             </Button>
           </Row>
         </Form>

@@ -97,7 +97,7 @@ function Work(prop) {
           ))}
           <Row className="mb-3">
             <Button type="button" onClick={addWorkFields}>
-              Add New Education
+              Add New Work
             </Button>
           </Row>
         </Form>
