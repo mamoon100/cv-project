@@ -1,125 +1,18 @@
 import { Card, Image, Button, Row, Col } from "react-bootstrap";
 import ReactToPrint from "react-to-print";
 import { useRef } from "react";
-/*photo // name and title*/
-/*basic // edu*/
-/*skill // work*/
-/*language // certificate*/
 function CV(prop) {
-  function getInfo(target, name) {
-    let x = "";
-    if (target) {
-      // @ts-ignore
-      x = target.map((e, i) => {
-        return e[name];
-      });
-    }
-    return x;
-  }
+  // function getInfo(target, name) {
+  //   let x = "";
+  //   if (target) {
+  //     // @ts-ignore
+  //     x = target.map((e, i) => {
+  //       return e[name];
+  //     });
+  //   }
+  //   return x;
+  // }
   const componentRef = useRef();
-  /**  <Card bg="light" text="dark">
-      {prop.photo ? (
-        <Image
-          src={prop.photo}
-          alt="profile"
-          width="200px"
-          height="200px"
-          roundedCircle
-        />
-      ) : null}
-      <p>{prop.basic.fullName}</p>
-      <p>{prop.basic.title}</p>
-      <p>{prop.basic.email}</p>
-      <p>{prop.basic.phone}</p>
-      <p>{prop.basic.address}</p>
-      <p>{prop.basic.date}</p>
-      {getInfo(prop.edu, "major") &&
-        // @ts-ignore
-        getInfo(prop.edu, "major").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.edu, "major") &&
-        // @ts-ignore
-        getInfo(prop.edu, "school").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.edu, "major") &&
-        // @ts-ignore
-        getInfo(prop.edu, "degree").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.edu, "major") &&
-        // @ts-ignore
-        getInfo(prop.edu, "startStudy").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.edu, "major") &&
-        // @ts-ignore
-        getInfo(prop.edu, "graduation").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.edu, "major") &&
-        // @ts-ignore
-        getInfo(prop.edu, "gpa").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.work, "title") &&
-        // @ts-ignore
-        getInfo(prop.work, "title").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.work, "company") &&
-        // @ts-ignore
-        getInfo(prop.work, "company").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.work, "address") &&
-        // @ts-ignore
-        getInfo(prop.work, "address").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.work, "start") &&
-        // @ts-ignore
-        getInfo(prop.work, "start").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.work, "end") &&
-        // @ts-ignore
-        getInfo(prop.work, "end").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.skills, "skill") &&
-        // @ts-ignore
-        getInfo(prop.skills, "skill").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.language, "language") &&
-        // @ts-ignore
-        getInfo(prop.language, "language").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.language, "prof") &&
-        // @ts-ignore
-        getInfo(prop.language, "prof").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-
-      {getInfo(prop.certificate, "certificate") &&
-        // @ts-ignore
-        getInfo(prop.certificate, "certificate").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.certificate, "certificateStart") &&
-        // @ts-ignore
-        getInfo(prop.certificate, "certificateStart").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-      {getInfo(prop.certificate, "certificateEnd") &&
-        // @ts-ignore
-        getInfo(prop.certificate, "certificateEnd").map((e, i) => {
-          return <p key={i}>{e}</p>;
-        })}
-    </Card>**/
   return (
     <>
       <Card>
@@ -134,22 +27,13 @@ function CV(prop) {
             }}
           >
             {/* CV Photo of header cv */}
-            <Col
-              lg={3}
-              xs={3}
-              style={
-                {
-                  // backgroundColor: "pink",
-                }
-              }
-            >
+            <Col lg={3} xs={3}>
               {prop.photo ? (
                 <Image
                   src={prop.photo}
                   alt="profile"
                   width="130px"
                   height="130px"
-                  // className="m-2"
                   roundedCircle
                   style={{
                     margin: "0",
@@ -159,6 +43,7 @@ function CV(prop) {
             </Col>
             {/* End of CV photo */}
             {/* CV Name and title header*/}
+
             <Col
               lg={9}
               xs={9}
@@ -171,7 +56,6 @@ function CV(prop) {
                 alignItems: "flex-start",
                 backgroundColor: "#479099",
                 color: "white",
-                // backgroundColor: "black",
               }}
             >
               <h1
@@ -182,7 +66,7 @@ function CV(prop) {
                 {prop.basic.fullName}
               </h1>
 
-              <h2
+              <h5
                 style={{
                   margin: "0",
                 }}
@@ -196,7 +80,7 @@ function CV(prop) {
                     width: "250px",
                   }}
                 />
-              </h2>
+              </h5>
             </Col>
             {/* End of CV name and title header */}
           </Row>
@@ -212,7 +96,6 @@ function CV(prop) {
                 display: "flex",
                 flexDirection: "column",
                 gap: "3px",
-                // width: "25%",
               }}
             >
               {prop.basic.email ? (
@@ -221,11 +104,10 @@ function CV(prop) {
                     margin: "0",
                     width: "100%",
                     textAlign: "justify",
-                    // height: "100px",
                   }}
                 >
-                  ({prop.basic.email.split("@")[0]}
-                  <br />@{prop.basic.email.split("@")[1]})
+                  {prop.basic.email.split("@")[0]}
+                  <br />@{prop.basic.email.split("@")[1]}
                 </p>
               ) : null}
 
@@ -262,27 +144,69 @@ function CV(prop) {
                 flexDirection: "column",
               }}
             >
-              <span>
-                <h3
-                  style={{
-                    color: "#479099",
-                    fontWeight: "bold",
-                  }}
-                >
-                  EDUCATION
-                  <hr
-                    style={{
-                      height: "3px",
-                      backgroundColor: "#479099",
-                      // width: "110%",
-                    }}
-                  />
-                </h3>
-              </span>
-              <span></span>
+              {prop.edu && (
+                <>
+                  <span>
+                    <h3
+                      style={{
+                        color: "#479099",
+                        fontWeight: "bold",
+                        textIndent: "25px",
+                      }}
+                    >
+                      EDUCATION
+                      <hr
+                        style={{
+                          height: "3px",
+                          backgroundColor: "#479099",
+                        }}
+                      />
+                    </h3>
+                  </span>
+                  {prop.edu
+                    ? prop.edu.map((e, index) => {
+                        return (
+                          <span
+                            style={{
+                              textIndent: "25px",
+                            }}
+                          >
+                            <h4
+                              style={{
+                                color: "#479099",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              {e.major.toUpperCase()}
+                              {e.degree ? `  (${e.degree})` : null}
+                            </h4>
+                            <h5>{e.school.toUpperCase()}</h5>
+                            <span
+                              style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                color: "#479099",
+                              }}
+                            >
+                              {e.startStudy && (
+                                <>
+                                  <p
+                                    style={{}}
+                                  >{`${e.startStudy} 🠮 ${e.graduation}`}</p>
+                                  {e.gpa && <p>{`${e.gpa}/4.0 `}</p>}
+                                </>
+                              )}
+                            </span>
+                          </span>
+                        );
+                      })
+                    : null}
+                </>
+              )}
             </Col>
             {/* End of CV edu info */}
             {/* Cv skill info */}
+
             <Col
               lg={3}
               xs={3}
@@ -292,52 +216,245 @@ function CV(prop) {
                 flexDirection: "column",
               }}
             >
-              <span>
-                <h3
-                  style={{
-                    color: "#479099",
-                    fontWeight: "bold",
-                  }}
-                >
-                  SKILLS
-                </h3>
-                <hr
-                  style={{
-                    height: "3px",
-                    backgroundColor: "#479099",
-                  }}
-                />
-              </span>
-              <span
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  alignItems: "flex-start",
-                  gap: "5px",
-                }}
-              >
-                {getInfo(prop.skills, "skill") &&
-                  // @ts-ignore
-                  getInfo(prop.skills, "skill").map((e, i) => {
-                    return (
-                      <p
-                        key={i}
-                        style={{
-                          backgroundColor: "#479099",
-                          color: "white",
-                          textAlign: "center",
-                          width: "auto",
-                          borderRadius: "15px",
-                          padding: "10px",
-                        }}
-                      >
-                        {e}
-                      </p>
-                    );
-                  })}
-              </span>
+              {prop.skills ? (
+                <>
+                  <span>
+                    <h3
+                      style={{
+                        color: "#479099",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      SKILLS
+                    </h3>
+                    <hr
+                      style={{
+                        height: "3px",
+                        backgroundColor: "#479099",
+                      }}
+                    />
+                  </span>
+
+                  <span
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "flex-start",
+                      gap: "5px",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    {prop.skills &&
+                      // @ts-ignore
+                      prop.skills.map((e, i) => {
+                        return (
+                          <p
+                            key={i}
+                            style={{
+                              backgroundColor: "#479099",
+                              color: "white",
+                              textAlign: "center",
+                              width: "auto",
+                              borderRadius: "15px",
+                              padding: "10px",
+                            }}
+                          >
+                            {e.skill}
+                          </p>
+                        );
+                      })}
+                  </span>
+                </>
+              ) : null}
             </Col>
             {/* End of CV skill info */}
+            {/* Start of CV Work info */}
+            <Col
+              lg={9}
+              xs={9}
+              className="mb-4"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {prop.work && (
+                <>
+                  <span>
+                    <h3
+                      style={{
+                        color: "#479099",
+                        fontWeight: "bold",
+                        textIndent: "25px",
+                      }}
+                    >
+                      WORK EXPERIENCE
+                      <hr
+                        style={{
+                          height: "3px",
+                          backgroundColor: "#479099",
+                          // width: "110%",
+                        }}
+                      />
+                    </h3>
+                  </span>
+                  {prop.work
+                    ? prop.work.map((e, index) => {
+                        return (
+                          <span
+                            style={{
+                              textIndent: "25px",
+                            }}
+                          >
+                            <h4
+                              style={{
+                                color: "#479099",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              {e.title}
+                            </h4>
+                            <h5 style={{}}>{e.company}</h5>
+                            <span
+                              style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                color: "#479099",
+                              }}
+                            >
+                              {e.start && (
+                                <p style={{}}>{`${e.start} 🠮 ${e.end}`}</p>
+                              )}
+                              <p>{e.address}</p>
+                            </span>
+                          </span>
+                        );
+                      })
+                    : null}
+                </>
+              )}
+            </Col>
+            {/* End of CV work info */}
+            {/* start of CV Language info */}
+            <Col
+              lg={3}
+              xs={3}
+              className="mb-4"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {prop.language ? (
+                <>
+                  <span>
+                    <h3
+                      style={{
+                        color: "#479099",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      LANGUAGE
+                    </h3>
+                    <hr
+                      style={{
+                        height: "3px",
+                        backgroundColor: "#479099",
+                      }}
+                    />
+                  </span>
+
+                  <span
+                    style={{
+                      display: "grid",
+                      gap: "5px",
+                    }}
+                  >
+                    {prop.language.map((e, i) => {
+                      return (
+                        <>
+                          <h5
+                            style={{
+                              color: "#479099",
+                            }}
+                          >
+                            {e.language}
+                          </h5>
+                          <p>{e.prof}</p>
+                        </>
+                      );
+                    })}
+                  </span>
+                </>
+              ) : null}
+            </Col>
+            {/* End of CV Language info  */}
+            {/* Start of Certificate info */}
+            <Col
+              lg={9}
+              xs={9}
+              className="mb-4"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {prop.certificate && (
+                <>
+                  <span>
+                    <h3
+                      style={{
+                        color: "#479099",
+                        fontWeight: "bold",
+                        textIndent: "25px",
+                      }}
+                    >
+                      CERTIFICATE
+                      <hr
+                        style={{
+                          height: "3px",
+                          backgroundColor: "#479099",
+                        }}
+                      />
+                    </h3>
+                  </span>
+                  {prop.certificate
+                    ? prop.certificate.map((e, index) => {
+                        return (
+                          <span
+                            style={{
+                              textIndent: "25px",
+                            }}
+                          >
+                            <h4
+                              style={{
+                                color: "#479099",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              {e.certificate}
+                            </h4>
+                            <span
+                              style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                color: "#479099",
+                              }}
+                            >
+                              {e.certificateStart && (
+                                <p
+                                  style={{}}
+                                >{`${e.certificateStart} 🠮 ${e.certificateEnd}`}</p>
+                              )}
+                            </span>
+                          </span>
+                        );
+                      })
+                    : null}
+                </>
+              )}
+            </Col>
+            {/* End of Certificate */}
           </Row>
           {/* End of CV body */}
         </Card.Body>
