@@ -2,16 +2,7 @@ import { Card, Image, Button, Row, Col } from "react-bootstrap";
 import ReactToPrint from "react-to-print";
 import { useRef } from "react";
 function CV(prop) {
-  // function getInfo(target, name) {
-  //   let x = "";
-  //   if (target) {
-  //     // @ts-ignore
-  //     x = target.map((e, i) => {
-  //       return e[name];
-  //     });
-  //   }
-  //   return x;
-  // }
+  // console.log(prop.basic.photo)
   const componentRef = useRef();
   return (
     <>
